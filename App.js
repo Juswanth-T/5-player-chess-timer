@@ -162,7 +162,7 @@ function App() {
   },[timerOn1])
 
   useEffect(() =>{
-   if(time1 <= 0 && time1 >= -2000){
+   if(time1 ===0){
      setTime1(-2200);
      setPer1(true);
      setTimerOn1(false);
@@ -173,6 +173,12 @@ function App() {
      else if(peroff5 === false)setTimerOn5(true);
       
     }
+
+    else if (time1 < 0 && time1>= -2000){
+      setPer1(true);
+      setTimerOn1(false);
+
+     }
   },[time1, peroff2, peroff3, peroff4, peroff5])
 
   useEffect(() =>{
@@ -189,15 +195,22 @@ function App() {
   },[timerOn2])
 
   useEffect(() =>{
-    if(time2 <= 0 && time2 >= -2000){
+    if(time2===0){
       setTime2(-2200);
       setPer2(true);
       setTimerOn2(false);
+
       if(peroff3 === false)setTimerOn3(true);
        else if(peroff4 === false)setTimerOn4(true);
        else if(peroff5 === false)setTimerOn5(true);
        else if(peroff1 === false) setTimerOn1(true);
       }
+
+      else if (time2 < 0 && time2>= -2000){
+        setPer2(true);
+        setTimerOn2(false);
+  
+       }
    },[time2, peroff3, peroff4, peroff5, peroff1])
 
   useEffect(() =>{
@@ -214,7 +227,7 @@ function App() {
   },[timerOn3])
 
   useEffect(() =>{
-    if(time3 <= 0 && time3 >= -2000){
+    if(time3 ===0){
       setTime3(-2200);
       setPer3(true);
       setTimerOn3(false);
@@ -224,6 +237,12 @@ function App() {
        else if(peroff1 === false) setTimerOn1(true);
       else if(peroff2 === false)setTimerOn2(true);
        
+     }
+
+     else if (time3 < 0 && time3>= -2000){
+      setPer3(true);
+      setTimerOn3(false);
+
      }
    },[time3, peroff4, peroff5, peroff1, peroff2])
 
@@ -241,7 +260,7 @@ function App() {
   },[timerOn4])
 
   useEffect(() =>{
-    if(time4 <= 0 && time4>= -2000){
+    if(time4 ===0){
       setTime4(-2200);
       setPer4(true);
       setTimerOn4(false);
@@ -251,6 +270,11 @@ function App() {
        else if(peroff2 === false) setTimerOn2(true);
       else if(peroff3 === false)setTimerOn3(true);
        
+     }
+     else if (time4 < 0 && time4>= -2000){
+      setPer4(true);
+      setTimerOn4(false);
+
      }
    },[time4, peroff5, peroff1, peroff2, peroff3])
 
@@ -269,8 +293,8 @@ function App() {
   },[timerOn5])
 
   useEffect(() =>{
-    if(time5 <= 0 && time5>= -2000){
-      setTime5(-2200);
+    if(time5 ===0){
+      
       setPer5(true);
       setTimerOn5(false);
 
@@ -280,7 +304,38 @@ function App() {
       else if(peroff4 === false)setTimerOn4(true);
        
      }
+     else if (time5 < 0 && time5>= -2000){
+      setPer5(true);
+      setTimerOn5(false);
+
+     }
+
    },[time5, peroff1, peroff2, peroff3, peroff4])
+
+   const handlecheckmate1 = () =>{
+    setPer1(true);
+    setTime1(-2200);
+   }
+
+   const handlecheckmate2 = () =>{
+    setPer2(true);
+    setTime2(-2200);
+   }
+
+   const handlecheckmate3 = () =>{
+    setPer3(true);
+    setTime3(-2200);
+   }
+
+   const handlecheckmate4 = () =>{
+    setPer4(true);
+    setTime4(-2200);
+   }
+
+   const handlecheckmate5 = () =>{
+    setPer5(true);
+    setTime5(-2200);
+   }
 
   return (
    
@@ -306,6 +361,7 @@ function App() {
         <button onClick = {()=> setTime1(prev => prev-2000)}>Penalty</button>
         <button onClick = {()=> setTime1(prev => prev+100)} className = "button1b2">Increment</button>
          <button onClick = {()=> setTimerOn1(true)}>Start Here</button>
+         <button onClick = {handlecheckmate1}>X</button>
         </div>
         
       </div>
@@ -332,6 +388,7 @@ function App() {
         <button onClick = {()=> setTime2(prev => prev-2000)}>Penalty</button>
         <button onClick = {()=> setTime2(prev => prev+100)} className = "button2b2">Increment</button>
          <button onClick = {()=> setTimerOn2(true)}>Start Here</button>
+         <button onClick = {handlecheckmate2}>X</button>
          </div>
        
       </div>
@@ -358,6 +415,7 @@ function App() {
         <button onClick = {()=> setTime3(prev => prev-2000)}>Penalty</button>
         <button onClick = {()=> setTime3(prev => prev+100)} className = "button3b2">Increment</button>
         <button onClick = {()=> setTimerOn3(true) }>Start Here</button>
+        <button onClick = {handlecheckmate3}>X</button>
         </div>
         
       </div>
@@ -384,6 +442,7 @@ function App() {
         <button onClick = {()=> setTime4(prev => prev-2000)}>Penalty</button>
         <button onClick = {()=> setTime4(prev => prev+100)} className = "button4b2">Increment</button>
         <button onClick = {()=> setTimerOn4(true)}>Start Here</button>
+        <button onClick = {handlecheckmate4}>X</button>
         </div>
       
       </div>
@@ -411,6 +470,7 @@ function App() {
         <button onClick = {()=> setTime5(prev => prev-2000)}>Penalty</button>
         <button onClick = {()=> setTime5(prev => prev+100)} className = "button5b2">Increment</button>
         <button onClick = {()=> setTimerOn5(true)}>Start Here</button>
+        <button onClick = {handlecheckmate5}>X</button>
       </div> 
         
       </div>

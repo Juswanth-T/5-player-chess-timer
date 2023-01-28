@@ -47,6 +47,7 @@
   border:2px solid rgb(232, 101, 101) ;
   padding: 4px;
   color:rgb(107, 4, 4);
+  margin:2px;
   
 }
 
@@ -69,6 +70,7 @@
   padding:45px;
   padding-top:0px;
   padding-bottom:15px;
+
 }
 .timer2 div {
   background:none;
@@ -86,6 +88,7 @@
   border:2px solid rgb(148, 145, 145) ;
   padding: 4px;
   color:rgb(0, 0, 0);
+  margin:2px;
   
 }
 
@@ -127,6 +130,7 @@
   border:2px solid rgb(170, 235, 187) ;
   padding: 4px;
   color:rgb(0, 0, 0);
+  margin:2px;
   
 }
 
@@ -164,6 +168,7 @@
   border:2px solid rgb(223, 223, 223) ;
   padding: 4px;
   color:rgb(0, 0, 0);
+  margin:2px;
 }
 
 .button4b2{
@@ -193,6 +198,7 @@
   display: flex;
   font-size: 85px;
   color: rgb(41, 5, 142);
+  
 
 }
 
@@ -201,6 +207,7 @@
   border:2px solid rgb(183, 180, 246) ;
   padding: 4px;
   color:rgb(0, 0, 0);
+  margin:2px;
 }
 
 .button5b2{
